@@ -1,163 +1,1070 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shivusha Energies Pvt. Ltd.</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: url('https://s.abcnews.com/images/US/wind-solar-sh-ps-201111_1605129741309_hpMain_16x9_1600.jpg') center/cover no-repeat;
-      height: 100vh;
-      color: rgb(226, 221, 221);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-    }
-    header p {
-      font-size: 1.5em;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    nav {
-      background: rgba(0,0,0,0.7);
-      color: white;
-      padding: 10px 20px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .card {
-      flex: 1 1 250px;
-      background: #f9f9f9;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      height: 150px;
-      object-fit: cover;
-    }
-    footer {
-      background: #222;
-      color: #eee;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    footer h3 {
-      margin-bottom: 10px;
-    }
-    footer p {
-      margin: 4px 0;
-    }
-    @media (max-width: 600px) {
-      header h1 { font-size: 2em; }
-      header p { font-size: 1em; }
-      nav { flex-direction: column; align-items: flex-start; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEPL - Shivusha Energies Private Limited | Solar Energy Solutions</title>
+    <style>
+        :root {
+            --primary: #2E7D32;
+            --secondary: #FFC107;
+            --light: #F5F5F5;
+            --dark: #212121;
+            --accent: #4CAF50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+        
+        .logo-text h1 {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .logo-text p {
+            font-size: 14px;
+            color: var(--dark);
+        }
+        
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+            background-color: rgba(46, 125, 50, 0.1);
+        }
+        
+        .login-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #1B5E20;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(46, 125, 50, 0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Mission Vision */
+        .mission-vision {
+            background-color: var(--light);
+        }
+        
+        .mv-container {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .mv-box {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .mv-box h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        
+        .mv-box i {
+            font-size: 40px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        /* Services */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-content h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .service-content ul {
+            list-style-position: inside;
+            margin-bottom: 15px;
+        }
+        
+        .service-content li {
+            margin-bottom: 8px;
+        }
+        
+        /* Why Choose Us */
+        .why-choose-us {
+            background-color: var(--light);
+        }
+        
+        .wc-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .wc-item {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .wc-item i {
+            font-size: 40px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .wc-item h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        /* Portfolio */
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .portfolio-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .portfolio-content {
+            padding: 20px;
+        }
+        
+        .portfolio-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-content p {
+            margin-bottom: 15px;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .status.completed {
+            background-color: #E8F5E9;
+            color: #2E7D32;
+        }
+        
+        .status.ongoing {
+            background-color: #FFF8E1;
+            color: #FF8F00;
+        }
+        
+        /* Values */
+        .values-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .value-item {
+            text-align: center;
+            padding: 25px 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .value-item i {
+            font-size: 40px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .value-item h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        /* Contact */
+        .contact-container {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .contact-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        .contact-card h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .info-item i {
+            font-size: 20px;
+            color: var(--secondary);
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-col h3 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+            font-size: 14px;
+        }
+        
+        /* Login Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #777;
+        }
+        
+        .modal-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .login-buttons {
+                margin-top: 20px;
+            }
+            
+            .about-content, .mv-container, .contact-container {
+                flex-direction: column;
+            }
+            
+            .hero h2 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="SEPL logo.png" alt="SEPL Logo">
+                <div class="logo-text">
+                    <h1>Shivusha Energies</h1>
+                    <p>Powering a Sustainable Future with Solar Energy</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="login-buttons">
+                <button class="btn btn-outline" onclick="openModal('employee')">Employee Login</button>
+                <button class="btn btn-primary" onclick="openModal('project')">Project Site Login</button>
+            </div>
+        </div>
+    </header>
 
-<nav>
-  <div><strong>Shivusha Energies</strong></div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Solar Energy Solutions for a Brighter Tomorrow</h2>
+            <p>Delivering high-quality, cost-effective solar power projects that drive India's transition to clean energy.</p>
+            <button class="btn btn-primary">Explore Our Services</button>
+        </div>
+    </section>
 
-<header>
-  <h1>Shivusha Energies Pvt. Ltd.</h1>
-  <p>Aggregating, Coordinating & Executing Solar Power Projects Across India</p>
-</header>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Shivusha Energies Private Limited (SEPL) is a leading solar energy solutions provider, specializing in land aggregation, project coordination, and EPC services. With a strong commitment to sustainability, we deliver high-quality, cost-effective solar power projects that drive India's transition to clean energy.</p>
+                    <p>At SEPL, we harness the power of the sun to build a brighter, greener future. Our dynamic and innovative approach ensures cutting-edge solar solutions that are environmentally responsible and economically viable.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" alt="Solar Panels">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>
-    Shivusha Energies Private Limited is committed to driving India’s transition to clean, renewable energy. 
-    Our core focus is on solar project aggregation, coordination, and execution. 
-    With an experienced team and visionary leadership, we ensure seamless end-to-end solutions in the solar domain.
-    Shivusha Energies is not just focused on solar. 
-    We plan to strategically expand our capabilities toward a broader portfolio of green energy solutions — 
-    including wind, hybrid solar-wind systems, and bioenergy innovations.
-  </p>
-</section>
+    <!-- Mission & Vision -->
+    <section class="section mission-vision">
+        <div class="container">
+            <div class="mv-container">
+                <div class="mv-box">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>To be a trusted leader in sustainable energy solutions, empowering communities through high-quality solar projects that promote environmental conservation and energy independence.</p>
+                </div>
+                <div class="mv-box">
+                    <i class="fas fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To become a renowned name in India's renewable energy sector, recognized for our expertise, innovation, and commitment to excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">
-      <img src="https://cmsv2-assets.apptegy.net/uploads/21066/file/2914082/5e0d15d5-99ad-4de6-8594-51a6fdd09c3e.png" alt="Project Aggregation">
-      <h3>Project Aggregation</h3>
-      <p>We bring together multiple solar projects, optimizing scale and investment for better returns and impact.</p>
+    <!-- Services -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Land Aggregation">
+                    </div>
+                    <div class="service-content">
+                        <h3>Land Aggregation</h3>
+                        <p>We identify, acquire, and manage prime land for solar power plants with:</p>
+                        <ul>
+                            <li>Land Identification & Sourcing</li>
+                            <li>Due Diligence & Site Assessment</li>
+                            <li>Land Acquisition & Legal Documentation</li>
+                            <li>Land Title Verification & Clearance</li>
+                            <li>Land Management & Maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project Coordination">
+                    </div>
+                    <div class="service-content">
+                        <h3>Project Coordination</h3>
+                        <p>We ensure seamless execution with end-to-end coordination:</p>
+                        <ul>
+                            <li>Project Planning & Scheduling</li>
+                            <li>Budget Management & Tracking</li>
+                            <li>Risk Management & Mitigation</li>
+                            <li>Permitting & Regulatory Approvals</li>
+                            <li>Quality Control & Progress Reporting</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" alt="EPC Services">
+                    </div>
+                    <div class="service-content">
+                        <h3>EPC Services</h3>
+                        <p>From concept to commissioning, we deliver turnkey solar solutions:</p>
+                        <ul>
+                            <li>Design & Engineering</li>
+                            <li>Procurement of High-Quality Components</li>
+                            <li>Construction & Installation</li>
+                            <li>Grid Connection & Commissioning</li>
+                            <li>Performance Monitoring & Maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section why-choose-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose SEPL?</h2>
+            </div>
+            <div class="wc-container">
+                <div class="wc-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Experienced Team</h3>
+                    <p>Skilled professionals with deep expertise in India's solar sector.</p>
+                </div>
+                <div class="wc-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Proven Track Record</h3>
+                    <p>Successfully delivered 50MW+ projects on time and within budget.</p>
+                </div>
+                <div class="wc-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Customer-Centric</h3>
+                    <p>Tailored solutions for long-term partnerships.</p>
+                </div>
+                <div class="wc-item">
+                    <i class="fas fa-award"></i>
+                    <h3>Quality Assurance</h3>
+                    <p>Adherence to global standards for reliability & efficiency.</p>
+                </div>
+                <div class="wc-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sustainable Commitment</h3>
+                    <p>Eco-friendly practices for a cleaner future.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="section" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Project Portfolio</h2>
+            </div>
+            <div class="portfolio-container">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="50 MW Solar Plant">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>50 MW Solar Plant, Silwani (MP)</h3>
+                        <p>Fully operational since 2024.</p>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" alt="2 MW Rooftop Solar">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>2 MW Rooftop Solar (Residential, MP)</h3>
+                        <p>Installed across multiple homes.</p>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" alt="100 MW Solar">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>100 MW Solar (Kusum A, MP)</h3>
+                        <p>Land aggregation & approvals in progress.</p>
+                        <span class="status ongoing">Ongoing</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="50 MW Solar">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>50 MW Solar (Kusum C, MP)</h3>
+                        <p>Land & coordination for JMJ Energy & Kashi Seona Surya Urja.</p>
+                        <span class="status ongoing">Ongoing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+            </div>
+            <div class="values-container">
+                <div class="value-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Integrity</h3>
+                    <p>Ethical, transparent, and honest business practices.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>Sustainability</h3>
+                    <p>Minimizing environmental impact through green energy.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>Leveraging cutting-edge solar technologies.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Customer Focus</h3>
+                    <p>Exceeding expectations with exceptional service.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-people-carry"></i>
+                    <h3>Teamwork</h3>
+                    <p>Collaborative culture driving success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Let's build a solar-powered future together!</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Get In Touch</h3>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>269, B-Sector, Shahpura, Near Manisha Market, Bhopal, MP - 462016</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>shivushaenergies@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>98939 90426</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Join Our Team</h3>
+                        <p>We're always looking for talented individuals passionate about renewable energy.</p>
+                        <button class="btn btn-outline" style="margin-top: 15px;">Career Opportunities</button>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <div class="contact-card">
+                        <h3>Send Us a Message</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About SEPL</h3>
+                    <p>Shivusha Energies Private Limited (SEPL) is a leading solar energy solutions provider, specializing in land aggregation, project coordination, and EPC services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Land Aggregation</a></li>
+                        <li><a href="#">Project Coordination</a></li>
+                        <li><a href="#">EPC Services</a></li>
+                        <li><a href="#">Solar Consultancy</a></li>
+                        <li><a href="#">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 269, B-Sector, Shahpura, Bhopal</li>
+                        <li><i class="fas fa-phone"></i> 98939 90426</li>
+                        <li><i class="fas fa-envelope"></i> shivushaenergies@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Shivusha Energies Private Limited. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modals -->
+    <div id="employeeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('employeeModal')">&times;</span>
+            <h2 class="modal-title">Employee Login</h2>
+            <form>
+                <div class="form-group">
+                    <label for="empUsername">Username</label>
+                    <input type="text" id="empUsername" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="empPassword">Password</label>
+                    <input type="password" id="empPassword" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+                </div>
+                <div class="form-group" style="text-align: center;">
+                    <a href="#" style="color: var(--primary);">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="card">
-      <img src="https://www.nmdc-energy.com/assets/media/V8gWeZu9jY-1280.jpeg" alt="Project Coordination">
-      <h3>Project Coordination</h3>
-      <p>Our expert team manages stakeholders, compliance, and timelines to ensure on-time delivery.</p>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('projectModal')">&times;</span>
+            <h2 class="modal-title">Project Site Login</h2>
+            <form>
+                <div class="form-group">
+                    <label for="projUsername">Username</label>
+                    <input type="text" id="projUsername" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="projPassword">Password</label>
+                    <input type="password" id="projPassword" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="projSite">Project Site</label>
+                    <select id="projSite" class="form-control" required>
+                        <option value="">Select Project Site</option>
+                        <option value="silwani">50 MW Solar Plant, Silwani (MP)</option>
+                        <option value="rooftop">2 MW Rooftop Solar (Residential, MP)</option>
+                        <option value="kusumA">100 MW Solar (Kusum A, MP)</option>
+                        <option value="kusumC">50 MW Solar (Kusum C, MP)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+                </div>
+                <div class="form-group" style="text-align: center;">
+                    <a href="#" style="color: var(--primary);">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="card">
-      <img src="https://www.eeintl.com/wp-content/uploads/2022/08/Cabazon-30.webp" alt="Project Execution">
-      <h3>Project Execution</h3>
-      <p>From groundwork to grid connection, we take care of every step to realize successful solar installations.</p>
-    </div>
-  </div>
-</section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Managing Director: <strong>Sanjay Shrivastava</strong></p>
-  <p>📍 Address: 269, First Floor, B-Sector, Shahpura, Bhopal, Madhya Pradesh 462039</p>
-  <p>📞 Phone: <a href="tel:9893990426">9893990426</a></p>
-  <p>📧 Email: <a href="mailto:shivushaenergies@gmail.com">shivushaenergies@gmail.com</a></p>
-</section>
-
-<footer>
-  <h3>Shivusha Energies Pvt. Ltd.</h3>
-  <p>© 2025 All rights reserved.</p>
-</footer>
-
+    <script>
+        // Modal functions
+        function openModal(type) {
+            if (type === 'employee') {
+                document.getElementById('employeeModal').style.display = 'flex';
+            } else if (type === 'project') {
+                document.getElementById('projectModal').style.display = 'flex';
+            }
+        }
+        
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = 'none';
+            }
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
