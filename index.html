@@ -6,7 +6,7 @@
     <title>SEPL - Shivusha Energies Private Limited | Solar Energy Solutions</title>
     <style>
         :root {
-            --primary: #2E7D32;
+            --primary: #3f4140;
             --secondary: #FFC107;
             --light: #F5F5F5;
             --dark: #212121;
@@ -23,8 +23,17 @@
         body {
             line-height: 1.6;
             color: var(--dark);
-            background-color: #f9f9f9;
+            background-color: rgb(253, 249, 238);
         }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+        }
+
+        h1, h2, h3, h4 {        
+             letter-spacing: 0.5px;
+        }
+
         
         .container {
             max-width: 1200px;
@@ -33,6 +42,31 @@
         }
         
         /* Header Styles */
+        header {
+    background: rgba(253, 249, 238, 0.9);
+    backdrop-filter: blur(20px);
+    }
+
+        nav ul li a {
+    position: relative;
+    overflow: hidden;
+    }
+
+       nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: var(--secondary);
+    transition: width 0.3s;
+     }
+
+    nav ul li a:hover::after {
+    width: 100%;
+    }
+
         header {
             background-color: rgb(253, 249, 238);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -128,6 +162,28 @@
         
         /* Hero Section */
         .hero {
+    background-attachment: fixed;
+    animation: bgZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes bgZoom {
+    from { background-size: 100%; }
+    to { background-size: 110%; }
+}
+
+.scroll-down {
+    margin-top: 50px;
+    font-size: 28px;
+    color: white;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+        .hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
@@ -148,6 +204,17 @@
         }
         
         /* Section Styles */
+        .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
         .section {
             padding: 60px 0;
         }
@@ -602,6 +669,7 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -633,6 +701,10 @@
             <p>Delivering high-quality, cost-effective solar power projects that drive India's transition to clean energy.</p>
             <button class="btn btn-primary">Explore Our Services</button>
         </div>
+        <div class="scroll-down">
+    <i class="fas fa-angle-down"></i>
+</div>
+
     </section>
 
     <!-- About Section -->
@@ -875,7 +947,7 @@
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>Email</h4>
-                                <p>shivushaenergies@gmail.com</p>
+                                <p>md@shivusha.com</p>
                             </div>
                         </div>
                         <div class="info-item">
@@ -963,7 +1035,7 @@
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> 269, B-Sector, Shahpura, Bhopal</li>
                         <li><i class="fas fa-phone"></i> 98939 90426</li>
-                        <li><i class="fas fa-envelope"></i> shivushaenergies@gmail.com</li>
+                        <li><i class="fas fa-envelope"></i> md@shivusha.com</li>
                     </ul>
                 </div>
             </div>
